@@ -1,0 +1,9 @@
+#!/bin/bash
+
+#script to shutdown this machine
+
+TIMEOUT=$timeout
+
+sudo shutdown -h TIMEOUT <<- _EOF_
+demo123
+_EOF_

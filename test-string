@@ -1,0 +1,22 @@
+#!/bin/bash
+
+#test-string
+
+ANSWER=YES
+
+if [ -z "$ANSWER" ]; then
+	echo "No Answer is given" >&2
+	exit 1
+fi
+
+if [ "$ANSWER" == "YES" ]; then
+	echo "Its a yes for me"
+elif [ "$ANSWER" == "NO" ]; then
+	echo "Its a no for me"
+elif [ "$ANSWER" == "MAYBE" ]; then
+	echo "Maybe"
+else
+	echo "Your answer is $ANSWER"
+fi
+
+exit

@@ -1,0 +1,26 @@
+#!/bin/bash
+
+#Integer Test expression script
+
+INT=-3
+
+
+if [[ "$INT" =~ ^-?[0-9]+$ ]] ; then
+	if ((INT==0)); then
+		echo " This number is zero";
+	elif ((INT<0)); then
+		echo "This is a negative number";
+	else
+		echo "This is a positive number";
+	fi
+	
+	if (( ((INT%2))==0)); then
+		echo "This number is even";
+	else
+		echo "This number is odd";
+	fi
+else
+	
+	echo "Number is empty/does not exists" >&2
+	exit 3
+fi
